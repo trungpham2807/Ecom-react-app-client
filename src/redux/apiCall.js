@@ -1,5 +1,4 @@
 import {loginFailure, loginStart, loginSuccess, registerSuccess, registerFailure, registerStart} from "./userRedux"
-import {publicRequest} from "../apiService"
 import {userRequest} from "../apiService"
 // username, password
 export const login = async (dispatch, user) => {
@@ -16,6 +15,7 @@ export const register = async (dispatch, user) => {
     dispatch(registerStart());
     try{
         const res = await userRequest.post("/auth/register", user);
+        console.log(res)
         dispatch(registerSuccess());
     }catch(err){
         dispatch(registerFailure())

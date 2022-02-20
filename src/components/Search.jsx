@@ -14,7 +14,7 @@ const Title = styled.h1`
 const Search = () => {
     let searchProduct = JSON.parse(localStorage.getItem("Search"));
     const [search, setSearch] = useState(searchProduct);
-    console.log("search", searchProduct);
+    console.log("search", search);
 
     useEffect(() => {
         setSearch(searchProduct);

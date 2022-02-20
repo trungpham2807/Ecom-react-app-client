@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
 import { Link } from 'react-router-dom';
 
-import {remQuant, addQuant, removeProduct, addProduct, resetCart} from "../redux/cartRedux";
+import {remQuant, addQuant, removeProduct} from "../redux/cartRedux";
 import {useDispatch, useSelector} from "react-redux"
 import {useState, useEffect} from "react"
 import StripeCheckout from "react-stripe-checkout"

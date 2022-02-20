@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import { Badge } from '@material-ui/core';
 import {useSelector, useDispatch} from 'react-redux';
-import axios from "axios";
 import { resetUser } from '../redux/userRedux';
 import {publicRequest} from "../apiService"
 const Container = styled.div`

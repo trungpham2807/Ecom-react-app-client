@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import {useState} from "react"
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {useNavigate} from 'react-router-dom';
 import { register } from "../redux/apiCall";
 
@@ -12,9 +12,9 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  console.log(name, lastName, confirmPassword)
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const {isFetching, error} = useSelector(state => state.user)
   const handleClick = (e) => {
     e.preventDefault();
     register(dispatch, {username, email, password});

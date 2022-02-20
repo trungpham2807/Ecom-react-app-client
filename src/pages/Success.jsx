@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import {resetCart} from "../redux/cartRedux";
 import { Link } from 'react-router-dom';
-import axios from "axios";
 import { publicRequest } from "../apiService";
 
 const Success = () => {
